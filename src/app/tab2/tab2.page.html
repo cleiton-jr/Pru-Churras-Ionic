@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Truco
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="ion-justify-content-center ion-align-items-center" color="medium">
+    <ion-label>Valendo: {{valendo}}</ion-label>
+  </ion-item>
+
+<div class="imagem"></div>
+
+  <div class="container ion-justify-content-center ion-align-items-center">
+    <ion-button size="default" color="dark" (click)="valorRodada(1)">1</ion-button>
+    <ion-button size="default" color="dark" (click)="valorRodada(3)">3</ion-button>
+    <ion-button size="default" color="dark" (click)="valorRodada(6)">6</ion-button>
+    <ion-button size="default" color="dark" (click)="valorRodada(9)">9</ion-button>
+    <ion-button size="default" color="dark" (click)="valorRodada(12)">12</ion-button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-justify-content-center ion-align-items-center">
+        <ion-button size="large" color="danger" expand="full" (click)="pontuarRodadaTime1()"><ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+        <span class="">{{pontuacaoRodadaTime1}}</span>
+        <ion-button size="large" color="danger" expand="full" (click)="subtrairPontoTime1()">-</ion-button>
+        <div class="times">
+          <span>Time 1</span>
+          <span>{{pontuacaoTime1}}</span>
+        </div>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col class="ion-justify-content-center ion-align-items-center">
+        <ion-button size="large" color="primary" expand="full" (click)="pontuarRodadaTime2()"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+        <span class="branco">{{pontuacaoRodadaTime2}}</span>
+        <ion-button size="large" color="primary" expand="full" (click)="subtrairPontoTime2()">-</ion-button>
+        <div class="times">
+          <span>Time 2</span>
+          <span>{{pontuacaoTime2}}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark" (click)="reset()">
+    <ion-title class="ion-text-center"> RESETAR</ion-title>
+  </ion-toolbar>
+</ion-footer>
